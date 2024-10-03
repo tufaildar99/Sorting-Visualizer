@@ -9,18 +9,18 @@ async function selectionSort(array, delay) {
       bars[j].style.backgroundColor = "yellow";
 
       if (array[j] < array[minIndex]) {
-        bars[minIndex].style.backgroundColor = "#3498db"; // Reset previous min
+        bars[minIndex].style.backgroundColor = "#3498db";
         minIndex = j;
         bars[minIndex].style.backgroundColor = "red";
       }
       await new Promise((resolve) => setTimeout(resolve, delay));
-      bars[j].style.backgroundColor = "#3498db"; // Reset after comparison
+      bars[j].style.backgroundColor = "#3498db";
     }
 
     if (minIndex !== i) {
       [array[i], array[minIndex]] = [array[minIndex], array[i]];
       swapBars(bars[i], bars[minIndex]);
     }
-    bars[i].style.backgroundColor = "green"; // Sorted
+    bars[i].style.backgroundColor = "green";
   }
 }

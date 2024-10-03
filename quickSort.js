@@ -25,13 +25,13 @@ async function partition(array, low, high, bars, delay) {
       [array[i], array[j]] = [array[j], array[i]];
       swapBars(bars[i], bars[j]);
     }
-    bars[j].style.backgroundColor = "#3498db"; // Reset
+    bars[j].style.backgroundColor = "#3498db";
   }
 
   [array[i + 1], array[high]] = [array[high], array[i + 1]];
   swapBars(bars[i + 1], bars[high]);
 
-  bars[high].style.backgroundColor = "#3498db"; // Reset pivot
-  bars[i + 1].style.backgroundColor = "green"; // Mark sorted pivot
+  bars[high].style.backgroundColor = "#3498db";
+  bars[i + 1].style.backgroundColor = "green";
   return i + 1;
 }

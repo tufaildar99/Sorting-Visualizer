@@ -6,7 +6,6 @@ const sortButton = document.getElementById("sort");
 let array = [];
 let delay = 200;
 
-// Generate random array
 function generateArray() {
   array = [];
   console.log("Initial", array);
